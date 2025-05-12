@@ -54,8 +54,8 @@ app.use(express.json());
 
 // Route middleware
 app.use('/auth', createProxy(process.env.AUTH_SERVICE_URL || "", "authService"));
-app.use('/user', createProxy(process.env.USER_SERVICE_URL || "", "userService"));
-app.use('/gym',protect, createProxy(process.env.GYM_SERVICE_URL || "", "gymService"));
+// app.use('/user', createProxy(process.env.USER_SERVICE_URL || "", "userService"));
+app.use('/gym', createProxy(process.env.GYM_SERVICE_URL || "", "gymService"));
 
 // Fallback route
 app.use('*', (req: Request, res: Response) => {
