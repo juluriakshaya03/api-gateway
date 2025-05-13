@@ -38,7 +38,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
 import { createProxy } from './proxy/proxy';
-import { protect } from './middlewares/authMiddleware';
+// import { protect } from './middlewares/authMiddleware';
 
 dotenv.config();
 
