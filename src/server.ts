@@ -46,7 +46,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: process.env.FRONTEND_SERVICE_URL,
 }));
 
 app.use(morgan('dev'));
